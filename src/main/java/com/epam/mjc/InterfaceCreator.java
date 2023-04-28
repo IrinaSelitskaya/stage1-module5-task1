@@ -21,10 +21,12 @@ public class InterfaceCreator {
     }
 
     public Consumer<List<Integer>> addEvenValuesAtTheEnd() {
+        List<Integer>list=new ArrayList<>();
         return x->{
+            list.addAll(x);
             for (Integer value:x){
                 if (value%2==0){
-                    x.add(value);
+                    list.add(value);
                 }
             }
         };
